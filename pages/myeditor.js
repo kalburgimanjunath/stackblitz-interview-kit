@@ -1,5 +1,6 @@
 import Editor from '@monaco-editor/react';
 import React, { useState } from 'react';
+import Select from 'react-select';
 export const CodeEditorWindow = ({ onChange, language, code, theme }) => {
   const [value, setValue] = useState(code || '');
 
@@ -21,6 +22,60 @@ export const CodeEditorWindow = ({ onChange, language, code, theme }) => {
       />
     </div>
   );
+};
+export const customStyles = {
+  control: (styles) => ({
+    ...styles,
+    width: '100%',
+    maxWidth: '14rem',
+    minWidth: '12rem',
+    borderRadius: '5px',
+    color: '#000',
+    fontSize: '0.8rem',
+    lineHeight: '1.75rem',
+    backgroundColor: '#FFFFFF',
+    cursor: 'pointer',
+    border: '2px solid #000000',
+    boxShadow: '5px 5px 0px 0px rgba(0,0,0);',
+    ':hover': {
+      border: '2px solid #000000',
+      boxShadow: 'none',
+    },
+  }),
+  option: (styles) => {
+    return {
+      ...styles,
+      color: '#000',
+      fontSize: '0.8rem',
+      lineHeight: '1.75rem',
+      width: '100%',
+      background: '#fff',
+      ':hover': {
+        backgroundColor: 'rgb(243 244 246)',
+        color: '#000',
+        cursor: 'pointer',
+      },
+    };
+  },
+  menu: (styles) => {
+    return {
+      ...styles,
+      backgroundColor: '#fff',
+      maxWidth: '14rem',
+      border: '2px solid #000000',
+      borderRadius: '5px',
+      boxShadow: '5px 5px 0px 0px rgba(0,0,0);',
+    };
+  },
+
+  placeholder: (defaultStyles) => {
+    return {
+      ...defaultStyles,
+      color: '#000',
+      fontSize: '0.8rem',
+      lineHeight: '1.75rem',
+    };
+  },
 };
 const OutputWindow = ({ outputDetails }) => {
   const getOutput = () => {
@@ -377,6 +432,21 @@ export default function Myeditor() {
   const handleCompile = () => {
     // We will come to the implementation later in the code
   };
+  const onSelectChange = (sl) => {
+    console.log('selected Option...', sl);
+    setLanguage(sl);
+  };
+  const LanguagesDropdown = ({ onSelectChange }) => {
+    return (
+      <Select
+        placeholder={`Filter By Category`}
+        options={languageOptions}
+        styles={customStyles}
+        defaultValue={languageOptions[0]}
+        onChange={(selectedOption) => onSelectChange(selectedOption)}
+      />
+    );
+  };
 
   const useKeyPress = function (targetKey) {
     const [keyPressed, setKeyPressed] = useState(false);
@@ -421,6 +491,17 @@ export default function Myeditor() {
   return (
     <div className="flex grid grid-cols-2">
       <div className="flex flex-col w-full h-full justify-start items-end">
+        <div className="flex flex-row">
+          <div className="px-4 py-2">
+            <LanguagesDropdown onSelectChange={onSelectChange} />
+          </div>
+          <div className="px-4 py-2">
+            {/* <ThemeDropdown
+              handleThemeChange={handleThemeChange}
+              theme={theme}
+            /> */}
+          </div>
+        </div>
         <CodeEditorWindow
           code={code}
           onChange={onChange}
