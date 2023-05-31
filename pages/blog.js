@@ -21,9 +21,13 @@ export default function Blog() {
   ];
   const BlogCard = ({ item }) => {
     return (
-      <div className="rounded bg-pink-100 m-2 p-5">
-        <div className="font-bold">{item.title}</div>
-        <div className="">{item.date}</div>
+      <div className="bg-white py-4 p-5 m-5 rounded hover:bg-gray-100 ">
+        <div className="text-sm font-medium text-gray-900">{item.title}</div>
+        <div className="items-center space-x-2 text-xs text-[#06b6d4]">
+          {item.date}
+        </div>
+        <div className="text-sm text-gray-500">{item.description}</div>
+        <div className="text-sm text-gray-700">{item.tags}</div>
       </div>
     );
   };
