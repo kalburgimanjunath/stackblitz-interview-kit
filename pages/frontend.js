@@ -5,18 +5,21 @@ export default function Frontend() {
     {
       id: 1,
       title: 'Levenshtein Distance',
+      type: 'hard',
       description:
         'Given 2 strings, find the minimum number of operations required to change one string to the other. An operation is defined as either replacement of a',
     },
     {
       id: 2,
       title: 'Minimum Number Of Coins To Make Change',
+      type: 'easy',
       description:
         'Given an array of coins or denominations and a target sum, calculate the minimum number of coins required to match the total. Note that the coins arra',
     },
     {
       id: 3,
       title: 'Number of Ways To Make Change',
+      type: 'medium',
       description:
         'Given a target amount and a set of denominations (coins), find the total number of ways the given target amount can be expressed by using the denomina',
     },
