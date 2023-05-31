@@ -1,6 +1,6 @@
 import Card from '../components/Card';
 
-export default function Algorithm() {
+export default function Companybase() {
   const alogos = [
     {
       id: 1,
@@ -20,7 +20,7 @@ export default function Algorithm() {
     {
       id: 1,
       title: 'Levenshtein Distance',
-      problemDifficulty: 'easy',
+      problemDifficulty: 'medium',
       problemStatement:
         'Given 2 strings, find the minimum number of operations required to change one string to the other. An operation is defined as either replacement of a',
       solution: 'solution',
@@ -35,7 +35,7 @@ export default function Algorithm() {
     {
       id: 1,
       title: 'Levenshtein Distance',
-      problemDifficulty: 'hard',
+      problemDifficulty: 'medium',
       problemStatement:
         'Given 2 strings, find the minimum number of operations required to change one string to the other. An operation is defined as either replacement of a',
       solution: 'solution',
@@ -51,7 +51,7 @@ export default function Algorithm() {
   return (
     <div className="container bg-gray-200 p-5">
       <div className="flex justify-between m-5">
-        <div className="font-bold p-2">Algorithm Problems</div>
+        <div className="font-bold p-2">Questions asked in Company Name</div>
         <div className="search">
           <input
             type="text"
