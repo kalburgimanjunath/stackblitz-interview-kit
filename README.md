@@ -9,3 +9,17 @@
 # solve yourself
 
 # analysis and theses
+
+## solution - working solution
+
+## resources
+
+## best solution
+
+## user stories
+
+## hide description tab
+
+## timer to check the clock
+
+##
