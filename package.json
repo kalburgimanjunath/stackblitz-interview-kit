@@ -15,6 +15,7 @@
     "@monaco-editor/react": "^4.5.1",
     "@radix-ui/colors": "^0.1.8",
     "@radix-ui/react-popover": "1.0.6",
+    "@stackblitz/sdk": "^1.9.0",
     "bootstrap-icons": "^1.10.5",
     "framer-motion": "^10.12.16",
     "next": "^13.0.6",
