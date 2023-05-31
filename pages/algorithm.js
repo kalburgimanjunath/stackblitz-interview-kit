@@ -5,23 +5,47 @@ export default function Algorithm() {
     {
       id: 1,
       title: 'Levenshtein Distance',
-      type: 'medium',
-      description:
+      problemDifficulty: 'medium',
+      problemStatement:
         'Given 2 strings, find the minimum number of operations required to change one string to the other. An operation is defined as either replacement of a',
+      solution: 'solution',
+      date: 'date',
+      sampleCode: 'sample code',
+      tags: ['algo'],
+      language: '',
+      likeCounter: '',
+      companies: ['honeywell', 'ABB'],
+      slug: ['algo'],
     },
     {
-      id: 2,
-      title: 'Minimum Number Of Coins To Make Change',
-      type: 'easy',
-      description:
-        'Given an array of coins or denominations and a target sum, calculate the minimum number of coins required to match the total. Note that the coins arra',
+      id: 1,
+      title: 'Levenshtein Distance',
+      problemDifficulty: 'medium',
+      problemStatement:
+        'Given 2 strings, find the minimum number of operations required to change one string to the other. An operation is defined as either replacement of a',
+      solution: 'solution',
+      date: 'date',
+      sampleCode: 'sample code',
+      tags: ['algo'],
+      language: '',
+      likeCounter: '',
+      companies: ['honeywell', 'ABB'],
+      slug: ['algo'],
     },
     {
-      id: 3,
-      title: 'Number of Ways To Make Change',
-      type: 'hard',
-      description:
-        'Given a target amount and a set of denominations (coins), find the total number of ways the given target amount can be expressed by using the denomina',
+      id: 1,
+      title: 'Levenshtein Distance',
+      problemDifficulty: 'medium',
+      problemStatement:
+        'Given 2 strings, find the minimum number of operations required to change one string to the other. An operation is defined as either replacement of a',
+      solution: 'solution',
+      date: 'date',
+      sampleCode: 'sample code',
+      tags: ['algo'],
+      language: '',
+      likeCounter: '',
+      companies: ['honeywell', 'ABB'],
+      slug: ['algo'],
     },
   ];
   return (

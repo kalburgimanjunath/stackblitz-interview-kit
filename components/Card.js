@@ -4,17 +4,17 @@ export default function Card({ item }) {
     <Link href="/myeditor">
       <div className="bg-white py-4 p-5 m-5 rounded hover:bg-gray-100 ">
         <div className="flex w-full flex-row justify-between">
-          {item.type == 'medium' ? (
+          {item.problemDifficulty == 'medium' ? (
             <div className="rounded-sm bg-gradient-to-r from-yellow-700 to-yellow-500 text-white px-2 py-0.5 text-sm mb-2">
               Medium
             </div>
           ) : null}
-          {item.type == 'easy' ? (
+          {item.problemDifficulty == 'easy' ? (
             <div className="rounded-sm bg-gradient-to-r from-green-700 to-green-500 text-white px-2 py-0.5 text-sm mb-2">
               Easy
             </div>
           ) : null}
-          {item.type == 'hard' ? (
+          {item.problemDifficulty == 'hard' ? (
             <div className="rounded-sm bg-gradient-to-r from-red-700 to-red-500 text-white px-2 py-0.5 text-sm mb-2">
               Hard
             </div>
@@ -25,7 +25,10 @@ export default function Card({ item }) {
           </div>
         </div>
         <div className="text-sm font-medium text-gray-900">{item.title}</div>
-        <div className="text-sm text-gray-500">{item.description}</div>
+        <div className="text-sm text-gray-500">{item.problemStatement}</div>
+        {/* <div className="text-sm text-gray-500">{item.solution}</div>
+        <div className="text-sm text-gray-500">{item.sampleCode}</div>
+        <div className="mr-2 text-gray-400">{item.companies}</div> */}
       </div>
     </Link>
   );
