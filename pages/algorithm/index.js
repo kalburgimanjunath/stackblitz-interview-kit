@@ -2,7 +2,7 @@ import Card from '../../components/Card';
 import { algorithmproblems } from '../api/algorithmproblems';
 import { useState } from 'react';
 export default function Index() {
-  const [searchTxt, setSearchString] = useState();
+  const [searchTxt, setSearchString] = useState('');
   return (
     <div className="container bg-gray-200 p-5">
       <div className="flex justify-between m-5">
