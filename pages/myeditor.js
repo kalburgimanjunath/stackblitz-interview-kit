@@ -14,10 +14,15 @@ export default function Myeditor() {
   };
 
   let selectedRepo = REPOS.angular;
+  let selectedSolutionsRepo = REPOS.reactjs;
   async function embedProject() {
     sdk.embedGithubProject('embed', selectedRepo.github, {
       height: 490,
       openFile: selectedRepo.openFile,
+    });
+    sdk.embedGithubProject('solutions', selectedSolutionsRepo.github, {
+      height: 490,
+      openFile: selectedSolutionsRepo.openFile,
     });
   }
 
@@ -46,8 +51,10 @@ export default function Myeditor() {
   //   openProject,
   //   setRepo,
   // };
-  const [toggleQuestion, showQuestions] = useState(false);
+  const [toggleQuestion, showQuestions] = useState(true);
   const [toggleResource, showResources] = useState(false);
+  const [showBoilerplateTab, setBoilerplateActiveTab] = useState(true);
+  const [showSolutionsTab, setSolutionsActiveTab] = useState(true);
   const resource = [
     {
       id: 1,
@@ -72,7 +79,7 @@ export default function Myeditor() {
             data-tabs-toggle="#myTabContent"
             role="tablist"
           >
-            <li className="mr-2" role="presentation">
+            <li className="mr-2 " role="presentation">
               <button
                 className="inline-block p-4 border-b-2 rounded-t-lg"
                 id="boilerplate-tab"
@@ -81,11 +88,15 @@ export default function Myeditor() {
                 role="tab"
                 aria-controls="boilerplate"
                 aria-selected="false"
+                onClick={() => {
+                  setBoilerplateActiveTab(true);
+                  setSolutionsActiveTab(false);
+                }}
               >
                 Boilerplate
               </button>
             </li>
-            <li className="mr-2" role="presentation">
+            <li className="mr-2 active" role="presentation">
               <button
                 className="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
                 id="dashboard-tab"
@@ -93,7 +104,11 @@ export default function Myeditor() {
                 type="button"
                 role="tab"
                 aria-controls="dashboard"
-                aria-selected="false"
+                aria-selected="true"
+                onClick={() => {
+                  setSolutionsActiveTab(true);
+                  setBoilerplateActiveTab(false);
+                }}
               >
                 Solutions
               </button>
@@ -106,8 +121,18 @@ export default function Myeditor() {
             id="boilerplate"
             role="tabpanel"
             aria-labelledby="boilerplate-tab"
+            style={{ display: showBoilerplateTab ? 'block' : 'none' }}
           >
             <div id="embed"></div>
+          </div>
+          <div
+            className="rounded-lg bg-gray-50 dark:bg-gray-800"
+            id="boilerplate"
+            role="tabpanel"
+            aria-labelledby="boilerplate-tab"
+            style={{ display: showSolutionsTab ? 'block' : 'none' }}
+          >
+            <div id="solutions"></div>
           </div>
         </div>
       </div>
