@@ -1,7 +1,7 @@
 import Link from 'next/link';
 export default function Card({ item }) {
   return (
-    <Link href="/myeditor">
+    <Link href={`/frontend/${item.id}`}>
       <div className="bg-white py-4 p-5 m-5 rounded hover:bg-gray-100 ">
         <div className="flex w-full flex-row justify-between">
           {item.problemDifficulty == 'medium' ? (
