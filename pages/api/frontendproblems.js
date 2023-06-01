@@ -2,7 +2,7 @@ export const frontendproblems = [
   {
     id: 1,
     title: 'Levenshtein Distance',
-    problemDifficulty: 'hard',
+    difficulty: 'Hard',
     problemStatement:
       'Given 2 strings, find the minimum number of operations required to change one string to the other. An operation is defined as either replacement of a',
     solution: 'solution',
@@ -17,7 +17,7 @@ export const frontendproblems = [
   {
     id: 2,
     title: 'Minimum Number Of Coins To Make Change',
-    problemDifficulty: 'easy',
+    difficulty: 'Easy',
     problemStatement:
       'Given an array of coins or denominations and a target sum, calculate the minimum number of coins required to match the total. Note that the coins arra',
     solution: 'solution',
@@ -32,7 +32,7 @@ export const frontendproblems = [
   {
     id: 3,
     title: 'Number of Ways To Make Change',
-    problemDifficulty: 'medium',
+    difficulty: 'Medium',
     problemStatement:
       'Given a target amount and a set of denominations (coins), find the total number of ways the given target amount can be expressed by using the denomina',
     solution: 'solution',

@@ -1,23 +1,23 @@
 import Link from 'next/link';
 import Truncate from 'react-truncate';
-export default function Card({ item, type, itemId }) {
+export default function Card({ item, type }) {
   const path =
-    type == 'algorithm' ? `/algorithm/${itemId}` : `/frontend/${itemId}`;
+    type == 'algorithm' ? `/algorithm/${item.id}` : `/frontend/${item.id}`;
   return (
     <Link href={path}>
       <div className="bg-white py-4 p-5 m-5 rounded hover:bg-gray-100 ">
         <div className="flex w-full flex-row justify-between">
-          {item.problemDifficulty == 'medium' ? (
+          {item.difficulty == 'Medium' ? (
             <div className="rounded-sm bg-gradient-to-r from-yellow-700 to-yellow-500 text-white px-2 py-0.5 text-sm mb-2">
               Medium
             </div>
           ) : null}
-          {item.problemDifficulty == 'easy' ? (
+          {item.difficulty == 'Easy' ? (
             <div className="rounded-sm bg-gradient-to-r from-green-700 to-green-500 text-white px-2 py-0.5 text-sm mb-2">
               Easy
             </div>
           ) : null}
-          {item.problemDifficulty == 'hard' ? (
+          {item.difficulty == 'Hard' ? (
             <div className="rounded-sm bg-gradient-to-r from-red-700 to-red-500 text-white px-2 py-0.5 text-sm mb-2">
               Hard
             </div>

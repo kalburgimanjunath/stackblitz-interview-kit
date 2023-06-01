@@ -33,6 +33,14 @@ export default function index({ params }) {
           <h5 className="font-bold">Sample Code</h5>
         </div>
         <div className="text-xs">{item.sampleCode}</div>
+        <footer className="flex bottom-0 fixed bottom-0 right-1">
+          <button className="w-full bg-blue-300 m-2 p-2 hover:bg-blue-100">
+            Save and Submit
+          </button>
+          <button className="w-full bg-blue-300 m-2 p-2 hover:bg-blue-100">
+            Reset
+          </button>
+        </footer>
       </div>
     );
   };
