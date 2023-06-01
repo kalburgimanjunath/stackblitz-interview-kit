@@ -29,6 +29,10 @@ export default function index({ params }) {
           <h5 className="font-bold">Solution</h5>
         </div>
         <div className="text-xs">{item.solution}</div>
+        <div>
+          <h5 className="font-bold">Sample Code</h5>
+        </div>
+        <div className="text-xs">{item.sampleCode}</div>
       </div>
     );
   };
@@ -72,7 +76,7 @@ export default function index({ params }) {
             >
               <li className="mr-2 " role="presentation">
                 <button
-                  className="inline-block text-gray-500 hover:text-gray-600 hover:bg-gray-200 rounded-t-lg py-4 px-4 text-sm font-medium text-center"
+                  className="inline-block text-gray-500 hover:text-gray-600 hover:bg-gray-200 py-4 px-4 text-sm font-medium text-center hover:bg-pink-100"
                   id="boilerplate-tab"
                   data-tabs-target="#boilerplate"
                   type="button"
@@ -86,7 +90,7 @@ export default function index({ params }) {
               </li>
               <li className="mr-2 active" role="presentation">
                 <button
-                  className="inline-block text-gray-500 hover:text-gray-600 hover:bg-gray-200 rounded-t-lg py-4 px-4 text-sm font-medium text-center"
+                  className="inline-block text-gray-500 hover:text-gray-600 hover:bg-gray-200 py-4 px-4 text-sm font-medium text-center hover:bg-pink-100"
                   id="dashboard-tab"
                   data-tabs-target="#dashboard"
                   type="button"
@@ -118,7 +122,7 @@ export default function index({ params }) {
             </div> */}
           </div>
         </div>
-        <div className="w-2/6 shadow-md">
+        <div className="w-2/6 shadow-lg">
           <div>
             {filterData[0] ? (
               <Question item={filterData[0]} />
