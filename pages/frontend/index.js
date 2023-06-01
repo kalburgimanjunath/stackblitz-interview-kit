@@ -1,6 +1,8 @@
 import Card from '../../components/Card';
 import { frontendproblems } from '../api/frontendproblems';
+import { useState } from 'react';
 export default function Index() {
+  const [searchTxt, setSearchString] = useState();
   return (
     <div className="container bg-gray-200 p-5">
       <div className="flex justify-between m-5">
@@ -10,26 +12,18 @@ export default function Index() {
             type="text"
             placeholder="Search problem"
             className="px-2 py-2"
+            value={searchTxt}
+            onChange={(e) => setSearchString(e.target.value)}
           />
         </div>
       </div>
       <div className="bg-white-100 flex grid grid-cols-3 grid-cols-xs-2 divide-y divide-gray-200">
         {frontendproblems &&
-          frontendproblems.map((item) => {
-            return <Card item={item} type="frontend" />;
-          })}
-      </div>
-      <div className="bg-white-100 flex grid grid-cols-3 grid-cols-xs-2 divide-y divide-gray-200">
-        {frontendproblems &&
-          frontendproblems.map((item) => {
-            return <Card item={item} type="frontend" />;
-          })}
-      </div>
-      <div className="bg-white-100 flex grid grid-cols-3 grid-cols-xs-2 divide-y divide-gray-200">
-        {frontendproblems &&
-          frontendproblems.map((item) => {
-            return <Card item={item} type="frontend" />;
-          })}
+          frontendproblems
+            .filter((newitem) => newitem.title.includes(searchTxt))
+            .map((item) => {
+              return <Card item={item} type="frontend" />;
+            })}
       </div>
     </div>
   );
