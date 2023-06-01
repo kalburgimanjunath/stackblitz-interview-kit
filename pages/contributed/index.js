@@ -3,6 +3,7 @@ import Card from '../../components/Card';
 import { useState, useEffect } from 'react';
 export default function Index() {
   const [frontendproblems, setFrontendProblems] = useState();
+  const [searchTxt, setSearchString] = useState();
   const fetchRecords = () => {
     fetch(
       'https://api.airtable.com/v0/appXy3Z9EQGEQveKp/Questions?api_key=keyeNXyxxuuYJY19w'
@@ -23,11 +24,11 @@ export default function Index() {
     }
   };
   useEffect(() => {
-    if (difficultyType != 'Easy') {
-      updateProblems();
-    } else {
-      fetchRecords();
-    }
+    // if (difficultyType != 'Easy') {
+    //   updateProblems();
+    // } else {
+    fetchRecords();
+    // }
   }, [frontendproblems, difficultyType]);
 
   return (
@@ -37,25 +38,29 @@ export default function Index() {
         <div className="search">
           <input
             type="text"
+            name="search"
+            value={searchTxt}
             placeholder="Search problem"
             className="px-2 py-2"
+            onChange={(e) => setSearchString(e.target.value)}
           />
+          {searchTxt}
         </div>
         <div className="bg-white-100 flex grid grid-cols-3 grid-cols-xs-2 divide-y divide-gray-200">
           <button
-            className="bg-pink-200 m-2 p-2"
+            className="bg-pink-200 m-1 p-2"
             onClick={() => setType('Easy')}
           >
             Easy
           </button>
           <button
-            className="bg-pink-200 m-2 p-2"
+            className="bg-pink-200 m-1 p-2"
             onClick={() => setType('Medium')}
           >
             Medium
           </button>
           <button
-            className="bg-pink-200 m-2 p-2"
+            className="bg-pink-200 m-1 p-2"
             onClick={() => setType('Hard')}
           >
             Hard
@@ -65,9 +70,17 @@ export default function Index() {
 
       <div className="bg-white-100 flex grid grid-cols-3 grid-cols-xs-2 divide-y divide-gray-200">
         {frontendproblems &&
-          frontendproblems.map((item) => {
-            return <Card item={item.fields} type="frontend" itemId={item.id} />;
-          })}
+          frontendproblems
+            .filter((newitem) =>
+              newitem['fields'].title
+                .toLowerCase()
+                .includes(searchTxt.toLowerCase())
+            )
+            .map((item) => {
+              return (
+                <Card item={item.fields} type="frontend" itemId={item.id} />
+              );
+            })}
       </div>
       {/* <div className="bg-white-100 flex grid grid-cols-3 grid-cols-xs-2 divide-y divide-gray-200">
         {frontendproblems &&
