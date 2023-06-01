@@ -54,16 +54,15 @@ export default function Contribute() {
               resetForm({
                 values: {
                   title: '',
-                  difficulty:'',
-                  problemStatement:'',
-                  solution:'',
-                  date:'',
-                  samplecode:'',
-                  tags:'',
-                  language:'',
-                  companies:'',
-                  slug:''
-
+                  difficulty: '',
+                  problemStatement: '',
+                  solution: '',
+                  date: '',
+                  samplecode: '',
+                  tags: '',
+                  language: '',
+                  companies: '',
+                  slug: '',
                 },
               });
               setSubmitting(false);

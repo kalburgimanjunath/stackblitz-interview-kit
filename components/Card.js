@@ -1,7 +1,8 @@
 import Link from 'next/link';
-export default function Card({ item, type }) {
+import Truncate from 'react-truncate';
+export default function Card({ item, type, itemId }) {
   const path =
-    type == 'algorithm' ? `/algorithm/${item.id}` : `/frontend/${item.id}`;
+    type == 'algorithm' ? `/algorithm/${itemId}` : `/frontend/${itemId}`;
   return (
     <Link href={path}>
       <div className="bg-white py-4 p-5 m-5 rounded hover:bg-gray-100 ">
@@ -27,7 +28,11 @@ export default function Card({ item, type }) {
           </div>
         </div>
         <div className="text-sm font-medium text-gray-900">{item.title}</div>
-        <div className="text-sm text-gray-500">{item.problemStatement}</div>
+        <div className="text-sm text-gray-500">
+          <Truncate lines={3} ellipsis={<span>... Read more</span>}>
+            {item.problemStatement}
+          </Truncate>
+        </div>
         {/* <div className="text-sm text-gray-500">{item.solution}</div>
         <div className="text-sm text-gray-500">{item.sampleCode}</div>
         <div className="mr-2 text-gray-400">{item.companies}</div> */}

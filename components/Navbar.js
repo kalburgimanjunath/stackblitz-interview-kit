@@ -12,6 +12,7 @@ const navigation = [
   { name: 'Companies', href: '/companies', current: false },
   { name: 'Blog', href: '/blog', current: false },
   { name: 'Contribute', href: '/contribute', current: false },
+  { name: 'Contributed Problems', href: '/contributed', current: false },
 ];
 
 function classNames(...classes) {
