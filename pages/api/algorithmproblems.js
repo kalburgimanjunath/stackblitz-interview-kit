@@ -1,0 +1,47 @@
+export const algorithmproblems = [
+  {
+    id: 1,
+    title: 'Levenshtein Distance100',
+    problemDifficulty: 'medium',
+    problemStatement:
+      'Given 2 strings, find the minimum number of operations required to change one string to the other. An operation is defined as either replacement of a',
+    solution: 'solution',
+    date: 'date',
+    sampleCode: 'sample code',
+    tags: ['algo'],
+    language: '',
+    likeCounter: '',
+    companies: ['honeywell', 'ABB'],
+    slug: ['algo'],
+  },
+  {
+    id: 1,
+    title: 'Levenshtein Distance',
+    problemDifficulty: 'easy',
+    problemStatement:
+      'Given 2 strings, find the minimum number of operations required to change one string to the other. An operation is defined as either replacement of a',
+    solution: 'solution',
+    date: 'date',
+    sampleCode: 'sample code',
+    tags: ['algo'],
+    language: '',
+    likeCounter: '',
+    companies: ['honeywell', 'ABB'],
+    slug: ['algo'],
+  },
+  {
+    id: 1,
+    title: 'Levenshtein Distance',
+    problemDifficulty: 'hard',
+    problemStatement:
+      'Given 2 strings, find the minimum number of operations required to change one string to the other. An operation is defined as either replacement of a',
+    solution: 'solution',
+    date: 'date',
+    sampleCode: 'sample code',
+    tags: ['algo'],
+    language: '',
+    likeCounter: '',
+    companies: ['honeywell', 'ABB'],
+    slug: ['algo'],
+  },
+];

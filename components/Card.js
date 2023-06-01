@@ -1,7 +1,9 @@
 import Link from 'next/link';
-export default function Card({ item }) {
+export default function Card({ item, type }) {
+  const path =
+    type == 'algorithm' ? `/algorithm/${item.id}` : `/frontend/${item.id}`;
   return (
-    <Link href={`/frontend/${item.id}`}>
+    <Link href={path}>
       <div className="bg-white py-4 p-5 m-5 rounded hover:bg-gray-100 ">
         <div className="flex w-full flex-row justify-between">
           {item.problemDifficulty == 'medium' ? (

@@ -1,10 +1,10 @@
 import Card from '../../components/Card';
-import { frontendproblems } from '../api/frontendproblems';
+import { algorithmproblems } from '../api/algorithmproblems';
 export default function Index() {
   return (
     <div className="container bg-gray-200 p-5">
       <div className="flex justify-between m-5">
-        <div className="font-bold p-2">Frontend Problems</div>
+        <div className="font-bold p-2">Algorithm Problems</div>
         <div className="search">
           <input
             type="text"
@@ -14,21 +14,21 @@ export default function Index() {
         </div>
       </div>
       <div className="bg-white-100 flex grid grid-cols-3 grid-cols-xs-2 divide-y divide-gray-200">
-        {frontendproblems &&
-          frontendproblems.map((item) => {
-            return <Card item={item} type="frontend" />;
+        {algorithmproblems &&
+          algorithmproblems.map((item) => {
+            return <Card item={item} type="algorithm" />;
           })}
       </div>
       <div className="bg-white-100 flex grid grid-cols-3 grid-cols-xs-2 divide-y divide-gray-200">
-        {frontendproblems &&
-          frontendproblems.map((item) => {
-            return <Card item={item} type="frontend" />;
+        {algorithmproblems &&
+          algorithmproblems.map((item) => {
+            return <Card item={item} type="algorithm" />;
           })}
       </div>
       <div className="bg-white-100 flex grid grid-cols-3 grid-cols-xs-2 divide-y divide-gray-200">
-        {frontendproblems &&
-          frontendproblems.map((item) => {
-            return <Card item={item} type="frontend" />;
+        {algorithmproblems &&
+          algorithmproblems.map((item) => {
+            return <Card item={item} type="algorithm" />;
           })}
       </div>
     </div>
