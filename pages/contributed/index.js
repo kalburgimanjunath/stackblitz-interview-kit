@@ -3,7 +3,7 @@ import Card from '../../components/Card';
 import { useState, useEffect } from 'react';
 export default function Index() {
   const [frontendproblems, setFrontendProblems] = useState();
-  const [searchTxt, setSearchString] = useState();
+  const [searchTxt, setSearchString] = useState(' ');
   const fetchRecords = () => {
     fetch(
       'https://api.airtable.com/v0/appXy3Z9EQGEQveKp/Questions?api_key=keyeNXyxxuuYJY19w'
@@ -72,9 +72,7 @@ export default function Index() {
         {frontendproblems &&
           frontendproblems
             .filter((newitem) =>
-              newitem['fields'].title
-                .toLowerCase()
-                .includes(searchTxt.toLowerCase())
+              newitem['fields'].title.toLowerCase().includes(searchTxt)
             )
             .map((item) => {
               return (
