@@ -37,7 +37,7 @@ export default function Home() {
         text="Create React Library Example 😄"
         backgroundColor="orange"
       />
-      <Hero />
+      <Hero image={'https://picsum.photos/200/300'} />
       <Posts posts={posts} />
     </div>
   );
