@@ -1,3 +1,4 @@
+import Link from 'next/link';
 export default function Blog() {
   const blogs = [
     {
@@ -38,7 +39,10 @@ export default function Blog() {
         <p>
           Blogs Get the latest resources, news and article on Technical
           Interview Preparation. Level up your development career and ace your
-          next technical interview round!
+          next technical interview round! or
+          <Link href="./createblog">
+            <span className="text-blue-700"> Contribute your blog post.</span>
+          </Link>
         </p>
       </div>
       <div className="grid grid-cols-3 mt-10">

@@ -47,7 +47,9 @@ export default function Contribute() {
           // }}
           onSubmit={(values, { setSubmitting, resetForm }) => {
             setTimeout(() => {
-              toast('Successfully saved');
+              toast(
+                'Successfully saved and will be published once gets approved'
+              );
               saveData({
                 fields: values,
               });
