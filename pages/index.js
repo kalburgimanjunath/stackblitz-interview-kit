@@ -31,6 +31,16 @@ export default function Home() {
       body: 'est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla',
     },
   ];
+  const videos = [
+    {
+      title: 'title1',
+      url: 'https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/examples/captions-example.mp4',
+    },
+    {
+      title: 'title1',
+      url: 'https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/examples/captions-example.mp4',
+    },
+  ];
   return (
     <div className="container mx-auto bg-gray-100">
       {/* <BackgroundSlideshow images={[image1, image2, image3]} /> */}
@@ -40,7 +50,7 @@ export default function Home() {
       />
       <Hero image={'https://picsum.photos/200/300'} />
       <Posts posts={posts} />
-      <Videos />
+      <Videos items={videos} />
     </div>
   );
 }
