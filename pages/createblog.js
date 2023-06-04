@@ -3,7 +3,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 export default function Contribute() {
   const saveData = (data) => {
-    const url = `https://api.airtable.com/v0/appXy3Z9EQGEQveKp/Questions`;
+    const url = `https://api.airtable.com/v0/appkjlwWrVqVpSC7i/InterviewBlogs`;
     const requestOptions = {
       method: 'POST',
       mode: 'cors',
