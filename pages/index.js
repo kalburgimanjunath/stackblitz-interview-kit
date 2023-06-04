@@ -7,6 +7,7 @@ import {
   Navbar,
   Posts,
   Hero,
+  Videos,
 } from 'mynewslds-library';
 import 'mynewslds-library/dist/output.css';
 // import image1 from '../assets/001.jpg';
@@ -39,6 +40,7 @@ export default function Home() {
       />
       <Hero image={'https://picsum.photos/200/300'} />
       <Posts posts={posts} />
+      <Videos />
     </div>
   );
 }
