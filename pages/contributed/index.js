@@ -32,7 +32,7 @@ export default function Index() {
     // } else {
     fetchRecords();
     // }
-  }, [frontendproblems, difficultyType]);
+  }, [frontendproblems]);
 
   return (
     <div className="container bg-gray-200 p-5">
