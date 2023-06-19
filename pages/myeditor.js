@@ -32,6 +32,7 @@ export default function Myeditor() {
   function openProject() {
     sdk.openGithubProject(selectedRepo.github, {
       openFile: selectedRepo.openFile,
+      // hideNavigation:false
     });
   }
 

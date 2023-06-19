@@ -25,7 +25,7 @@ export default function Createtutorial() {
         <div className="shadow-lg">
           <Sidebar />
           <div>
-            <h3 className="w-full font-bold">All Recordings</h3>
+            <h3 className="w-full font-bold m-2">All Recordings</h3>
             <div id="recordings"></div>
           </div>
         </div>
