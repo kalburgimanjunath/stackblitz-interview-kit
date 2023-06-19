@@ -71,7 +71,7 @@ export default function index({ params }) {
           'index.html': `<div id="app"></div>`,
           'index.js': `import './style.css';
     const appDiv = document.getElementById('app');
-    appDiv.innerHTML = '<h1>JS Starter</h1>';`,
+    appDiv.innerHTML = '<h1>${data[0].title}</h1>';`,
           'style.css': `body { font-family: system-ui, sans-serif; }`,
         },
         settings: {
@@ -99,6 +99,7 @@ export default function index({ params }) {
     if (filterData.length > 0) {
       openProject(filterData);
     }
+    openProject();
   }, []);
   return (
     <>
