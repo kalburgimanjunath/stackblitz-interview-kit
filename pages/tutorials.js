@@ -61,12 +61,14 @@ export default function Tutorials() {
   return (
     <div>
       <div className="m-2">
-        <Button
+        <a
           label="Create Tutorial"
           href="/createtutorial"
           className="bg-green-600 border-2 border-zinc-800 p-2"
           primary
-        ></Button>
+        >
+          Create Tutorial
+        </a>
       </div>
       <Videos items={videos} />
     </div>
