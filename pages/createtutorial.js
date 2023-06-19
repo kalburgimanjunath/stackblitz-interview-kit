@@ -49,13 +49,13 @@ export default function Createtutorial() {
         </div>
         <div className="shadow-lg p-4">
           <div>Preview</div>
-          {/* <div>
+          <div>
             <AudioRecordering />
-          </div> */}
+          </div>
           <div>Video Recording</div>
-          {/* <div>
+          <div>
             <VideoRecording />
-          </div> */}
+          </div>
         </div>
         <div className="shadow-lg p-4">
           <div className="border-2 w-full border-color-black-600 h-50">
