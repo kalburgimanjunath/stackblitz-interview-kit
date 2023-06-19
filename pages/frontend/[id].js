@@ -56,10 +56,36 @@ export default function index({ params }) {
     //   openFile: selectedSolutionsRepo.openFile,
     // });
   }
-  function openProject() {
-    sdk.openGithubProject(selectedRepo.github, {
-      openFile: selectedRepo.openFile,
-    });
+  function openProject(data) {
+    debugger;
+    // sdk.openGithubProject(selectedRepo.github, {
+    //   openFile: selectedRepo.openFile,
+    // });
+    sdk.openProject(
+      {
+        title: data[0].title,
+        description: 'Blank starter project for building ES6 apps.',
+        template: 'javascript',
+        clickToLoad: true,
+        files: {
+          'index.html': `<div id="app"></div>`,
+          'index.js': `import './style.css';
+    const appDiv = document.getElementById('app');
+    appDiv.innerHTML = '<h1>JS Starter</h1>';`,
+          'style.css': `body { font-family: system-ui, sans-serif; }`,
+        },
+        settings: {
+          compile: {
+            trigger: 'auto',
+            clearConsole: false,
+          },
+        },
+      },
+      {
+        newWindow: false,
+        openFile: ['index.html', 'index.html,style.css'],
+      }
+    );
   }
   function setRepo(element) {
     selectedRepo = REPOS[element.value];
@@ -69,7 +95,10 @@ export default function index({ params }) {
     }
   }
   useEffect(() => {
-    embedProject();
+    // embedProject();
+    if (filterData.length > 0) {
+      openProject(filterData);
+    }
   }, []);
   return (
     <>
