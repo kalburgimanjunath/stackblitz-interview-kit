@@ -9,7 +9,10 @@ export default function Index() {
       'https://api.airtable.com/v0/appXy3Z9EQGEQveKp/Questions?api_key=keyeNXyxxuuYJY19w'
     )
       .then((res) => res.json())
-      .then((result) => setFrontendProblems(result.records));
+      .then((result) => {
+        console.log(result.records);
+        setFrontendProblems(result.records);
+      });
   };
 
   const [difficultyType, setType] = useState('Easy');
@@ -29,7 +32,7 @@ export default function Index() {
     // } else {
     fetchRecords();
     // }
-  }, [frontendproblems, difficultyType]);
+  }, [frontendproblems]);
 
   return (
     <div className="container bg-gray-200 p-5">
