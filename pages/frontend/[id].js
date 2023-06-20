@@ -60,31 +60,59 @@ export default function index({ params }) {
     // sdk.openGithubProject(selectedRepo.github, {
     //   openFile: selectedRepo.openFile,
     // });
-    sdk.openProject(
-      {
-        title: data[0].title,
-        description: 'Blank starter project for building ES6 apps.',
-        template: 'javascript',
-        clickToLoad: true,
-        files: {
-          'index.html': `<div id="app"></div>`,
-          'index.js': `import './style.css';
-    const appDiv = document.getElementById('app');
-    appDiv.innerHTML = '<h1>${data[0].title}</h1>';`,
-          'style.css': `body { font-family: system-ui, sans-serif; }`,
-        },
-        settings: {
-          compile: {
-            trigger: 'auto',
-            clearConsole: false,
+    if (!data) {
+      sdk.openProject(
+        {
+          title: 'testing',
+          description: 'Blank starter project for building ES6 apps.',
+          template: 'create-react-app',
+          clickToLoad: true,
+          files: {
+            'index.html': `<div id="app"></div>`,
+            'index.js': `import './style.css';
+      const appDiv = document.getElementById('app');
+      appDiv.innerHTML = '<h1>testing</h1>';`,
+            'style.css': `body { font-family: system-ui, sans-serif; }`,
+          },
+          settings: {
+            compile: {
+              trigger: 'auto',
+              clearConsole: false,
+            },
           },
         },
-      },
-      {
-        newWindow: false,
-        openFile: ['index.html', 'index.html,style.css'],
-      }
-    );
+        {
+          newWindow: false,
+          openFile: ['index.html', 'index.html,style.css'],
+        }
+      );
+    } else {
+      sdk.openProject(
+        {
+          title: data[0].title,
+          description: 'Blank starter project for building ES6 apps.',
+          template: 'javascript',
+          clickToLoad: true,
+          files: {
+            'index.html': `<div id="app"></div>`,
+            'index.js': `import './style.css';
+    const appDiv = document.getElementById('app');
+    appDiv.innerHTML = '<h1>${data[0].title}</h1>';`,
+            'style.css': `body { font-family: system-ui, sans-serif; }`,
+          },
+          settings: {
+            compile: {
+              trigger: 'auto',
+              clearConsole: false,
+            },
+          },
+        },
+        {
+          newWindow: false,
+          openFile: ['index.html', 'index.html,style.css'],
+        }
+      );
+    }
   }
   function setRepo(element) {
     selectedRepo = REPOS[element.value];
@@ -98,6 +126,7 @@ export default function index({ params }) {
     if (filterData.length > 0) {
       openProject(filterData);
     }
+
     openProject();
   }, []);
   return (

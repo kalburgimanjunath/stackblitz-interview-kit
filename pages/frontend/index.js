@@ -7,6 +7,15 @@ export default function Index() {
     <div className="container bg-gray-200 p-5">
       <div className="flex justify-between m-5">
         <div className="font-bold p-2">Frontend Problems</div>
+        <div>
+          <a
+            className="bg-blue-200 hover:bg-blue-400 p-4"
+            href={`/frontend/testing`}
+            target="_new"
+          >
+            Add New Solution
+          </a>
+        </div>
         <div className="search">
           <input
             type="text"
