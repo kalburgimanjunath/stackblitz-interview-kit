@@ -57,7 +57,6 @@ export default function index({ params }) {
     // });
   }
   function openProject(data) {
-    debugger;
     // sdk.openGithubProject(selectedRepo.github, {
     //   openFile: selectedRepo.openFile,
     // });
