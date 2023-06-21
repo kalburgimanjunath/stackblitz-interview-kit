@@ -59,6 +59,29 @@ export default function LearningCenter() {
       url: 'https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/examples/captions-example.mp4',
     },
   ];
+  const v1 = [
+    'The three most important things to consider before the interview',
+    'How to give a good introduction of yourself',
+    'What are the Most Common Things Companies Look for in a Candidate?',
+    'Research the company',
+    'Interview Preparation: Research the Company',
+    'Interview Preparation: Research the Role',
+  ];
+  const v2 = [
+    '3 Important Things to Think About Before the Interview',
+    '3 Things to Ask About During the Interview',
+    'Interview Best Practices: 4 Things to Remember',
+    'How to improve your presentation skills',
+    'How to answer: What are your strengths and weaknesses',
+    'How to answer: Why do you find this job interesting',
+  ];
+  const v3 = [
+    'Preparing for the Case Interview',
+    'Prepare the Case Interview',
+    'Presentation Set Up: Best Practices',
+    'How to Best Deliver Your Case Presentation',
+    'How to Avoid Getting Nervous During the Case Interview',
+  ];
   return (
     <div>
       <h1>----- make a look around the Learning Center</h1>
