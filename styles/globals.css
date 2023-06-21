@@ -30,3 +30,6 @@ a {
   padding: 5px;
   @apply bg-pink-100 border-2 border-pink-600;
 }
+button.primary {
+  @apply bg-blue-300 text-white p-2 m-2;
+}
