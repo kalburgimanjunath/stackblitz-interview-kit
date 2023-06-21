@@ -1,7 +1,8 @@
-export default function VideoBlub({ items, title }) {
+export default function VideoBlub({ items, title, subtitle }) {
   return (
     <div className="">
-      <div className="font-bold m-2">{title}</div>
+      {title ? <div className="font-bold m-2">{title}</div> : null}
+      {subtitle ? <div className="m-2">{subtitle}</div> : null}
       <div className="grid grid-cols-6 gap-4">
         {items &&
           items.map((item) => {

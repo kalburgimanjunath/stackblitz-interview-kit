@@ -15,6 +15,7 @@ const navigation = [
   { name: 'Contributed Problems', href: '/contributed', current: false },
   { name: 'Tutorials', href: '/tutorials', current: false },
   { name: 'Coverletter', href: '/coverletter', current: false },
+  { name: 'Learning', href: '/learningcenter', current: false },
 ];
 
 function classNames(...classes) {
