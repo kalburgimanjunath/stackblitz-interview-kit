@@ -42,8 +42,12 @@ p {
 }
 .subtitle {
   font-size: 2rem;
-  @apply font-bold;
+  @apply font-bold text-blue-500;
 }
 .subtitle-2 {
   font-size: 1.5rem;
+  @apply font-bold text-blue-500;
+}
+ul li {
+  @apply p-2;
 }

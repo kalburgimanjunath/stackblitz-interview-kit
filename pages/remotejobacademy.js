@@ -54,7 +54,7 @@ export default function RemoteJobAcademy() {
       <h1 className="subtitle m-20">{mainheading}</h1>
       <h1 className="subtitle-2 m-20">Yes....</h1>
       <div className="m-20">
-        <ul>
+        <ul className="list-disc p-4">
           {list1 &&
             list1.map((item) => {
               return <li>{item}</li>;
@@ -64,7 +64,7 @@ export default function RemoteJobAcademy() {
         <h1 className="subtitle-2 m-20">What you’ll get</h1>
         <h1 className="subtitle-2 m-20">Clarity</h1>
         <div className="font-bold text-xl m-20">
-          <ul>
+          <ul className="list-disc p-4">
             {list2 &&
               list2.map((item) => {
                 return <li>{item}</li>;
@@ -72,14 +72,14 @@ export default function RemoteJobAcademy() {
           </ul>
         </div>
         <h1 className="subtitle-2 m-20">Confidence</h1>
-        <ul>
+        <ul className="list-disc p-4">
           {list3 &&
             list3.map((item) => {
               return <li>{item}</li>;
             })}
         </ul>
         <h1 className="subtitle-2 m-20">Results</h1>
-        <ul>
+        <ul className="list-disc p-4">
           {list4 &&
             list4.map((item) => {
               return <li>{item}</li>;
