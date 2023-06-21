@@ -16,6 +16,7 @@ export default function Coverletter() {
   //   },
   // });
   const [messageBody, setMessageBody] = useState('');
+  const [formSubmitted, setFormSubmitted] = useState(false);
   const senderName = 'Manjunath Kalburgi';
   const receipentName = "[Recipient's Name]";
   const jobTitle = '[Job Title]';
@@ -43,7 +44,7 @@ export default function Coverletter() {
     `;
       setMessageBody(newMessageBody);
     }
-  }, []);
+  }, [formSubmitted]);
   //   const newmessageBody2 = `Dear ${receipentName},
 
   // I am writing to apply for the ${jobTitle} position at ${companyName}. With ${experienceYear} years of experience in ${relevantField}, I am confident in my ability to contribute to your organization's success.
@@ -97,6 +98,7 @@ export default function Coverletter() {
             setTimeout(() => {
               alert(JSON.stringify(values, null, 2));
               setSubmitting(false);
+              setFormSubmitted(true);
             }, 400);
           }}
         >
