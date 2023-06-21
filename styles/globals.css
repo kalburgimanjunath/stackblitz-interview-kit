@@ -33,3 +33,6 @@ a {
 button.primary {
   @apply bg-blue-300 text-white p-2 m-2;
 }
+p {
+  @apply leading-8;
+}
