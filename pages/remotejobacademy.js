@@ -51,8 +51,8 @@ export default function RemoteJobAcademy() {
   ];
   return (
     <div>
-      <h1 className="font-bold text-2xl m-20">{mainheading}</h1>
-      <h1 className="font-bold text-2xl m-20">Yes....</h1>
+      <h1 className="subtitle m-20">{mainheading}</h1>
+      <h1 className="subtitle-2 m-20">Yes....</h1>
       <div className="m-20">
         <ul>
           {list1 &&
@@ -60,9 +60,9 @@ export default function RemoteJobAcademy() {
               return <li>{item}</li>;
             })}
         </ul>
-        <h1 className="font-bold text-xl m-20">Then… this is for you!</h1>
-        <h1 className="font-bold text-xl m-20">What you’ll get</h1>
-        <h1 className="font-bold text-xl m-20">Clarity</h1>
+        <h1 className="subtitle-2 m-20">Then… this is for you!</h1>
+        <h1 className="subtitle-2 m-20">What you’ll get</h1>
+        <h1 className="subtitle-2 m-20">Clarity</h1>
         <div className="font-bold text-xl m-20">
           <ul>
             {list2 &&
@@ -71,14 +71,14 @@ export default function RemoteJobAcademy() {
               })}
           </ul>
         </div>
-        <h1 className="font-bold text-xl m-20">Confidence</h1>
+        <h1 className="subtitle-2 m-20">Confidence</h1>
         <ul>
           {list3 &&
             list3.map((item) => {
               return <li>{item}</li>;
             })}
         </ul>
-        <h1 className="font-bold text-xl m-20">Results</h1>
+        <h1 className="subtitle-2 m-20">Results</h1>
         <ul>
           {list4 &&
             list4.map((item) => {
@@ -89,10 +89,10 @@ export default function RemoteJobAcademy() {
           Join the consultation
         </button>
         <section>
-          <h1>These people changed their lives</h1>
+          <h1 className="subtitle">These people changed their lives</h1>
         </section>
         <section>
-          <h1>What’s included?</h1>
+          <h1 className="subtitle">What’s included?</h1>
           <p>
             The Remote Job Academy (RJA) is a step-by-step programme, designed
             by a recruiter, that will enable you to get a remote job much easier
@@ -112,10 +112,10 @@ export default function RemoteJobAcademy() {
             There are 3 packages to choose from depending on what YOU personally
             need to succeed.
           </p>
-          <p>See what’s included below!</p>
+          <p className="subtitle">See what’s included below!</p>
         </section>
         <section>
-          <h1>FAQs</h1>
+          <h1 className="subtitle">FAQs</h1>
           <div>
             <p>
               <div>What kinds of jobs can I get?</div>

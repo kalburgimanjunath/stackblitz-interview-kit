@@ -3,9 +3,7 @@ import Subscribe from '../components/Subscribe';
 export default function Freeguide() {
   return (
     <div className="m-24">
-      <h1 className="font-bold text-2xl">
-        How To Get A Remote Job: FREE Guide
-      </h1>
+      <h1 className="pagetitle mb-10">How To Get A Remote Job: FREE Guide</h1>
       <div>
         <p>
           Finding a remote job is a lot more difficult than just getting ‘any

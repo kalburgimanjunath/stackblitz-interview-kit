@@ -36,3 +36,14 @@ button.primary {
 p {
   @apply leading-8;
 }
+.pagetitle {
+  font-size: 3rem;
+  @apply font-bold text-blue-500;
+}
+.subtitle {
+  font-size: 2rem;
+  @apply font-bold;
+}
+.subtitle-2 {
+  font-size: 1.5rem;
+}
