@@ -83,14 +83,20 @@ export default function LearningCenter() {
     'How to Avoid Getting Nervous During the Case Interview',
   ];
   return (
-    <div>
-      <h1>----- make a look around the Learning Center</h1>
+    <div className="m-20">
+      <h1 className="font-bold text-lg">
+        make a look around the Learning Center
+      </h1>
       <p>
         We believe that you can shine best when the stress of the unknown is
         removed from the equation. Here you will find materials that can prepare
         you better for recruitment processes.
       </p>
-      <p>Don’t forget to check regularly for updates and new content!</p>
+      <p>
+        <a href="./remotejobacademy" target="_new">
+          Don’t forget to check regularly for updates and new content!
+        </a>
+      </p>
       <VideoBlub
         items={videos}
         title="First steps into recruitment process"
