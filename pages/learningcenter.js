@@ -93,7 +93,11 @@ export default function LearningCenter() {
         you better for recruitment processes.
       </p>
       <p>
-        <a href="./remotejobacademy" target="_new" className="text-blue-700">
+        <a
+          href="./remotejobacademy"
+          target="_new"
+          className="font-bold text-blue-700"
+        >
           Don’t forget to check regularly for updates and new content!
         </a>
       </p>
