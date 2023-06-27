@@ -253,7 +253,9 @@ export default function RemoteJobAcademy() {
               <p>But we have a feeling you might not be needing it.</p>
               <p>*This is for the Community and Premium packages only.</p>
               <p>
-                <div>Ready to make the world your office?</div>
+                <div>
+                  <a href="./freeguide">Ready to make the world your office?</a>
+                </div>
               </p>
             </p>
           </div>

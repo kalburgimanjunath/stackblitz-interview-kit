@@ -84,7 +84,7 @@ export default function LearningCenter() {
   ];
   return (
     <div className="m-20">
-      <h1 className="font-bold text-lg">
+      <h1 className="font-bold text-lg uppercase pb-20">
         make a look around the Learning Center
       </h1>
       <p>
@@ -93,7 +93,7 @@ export default function LearningCenter() {
         you better for recruitment processes.
       </p>
       <p>
-        <a href="./remotejobacademy" target="_new">
+        <a href="./remotejobacademy" target="_new" className="text-blue-700">
           Don’t forget to check regularly for updates and new content!
         </a>
       </p>
