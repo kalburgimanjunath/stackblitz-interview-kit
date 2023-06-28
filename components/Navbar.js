@@ -16,6 +16,7 @@ const navigation = [
   { name: 'Tutorials', href: '/tutorials', current: false },
   { name: 'Coverletter', href: '/coverletter', current: false },
   { name: 'Learning', href: '/learningcenter', current: false },
+  { name: 'Certificate', href: '/certificates', current: false },
 ];
 
 function classNames(...classes) {
