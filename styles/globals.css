@@ -1,12 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Pinyon+Script|Rochester');
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+.cursive {
+  font-family: 'Pinyon Script', cursive;
+}
+.sans {
+  font-family: 'Open Sans', sans-serif;
+}
+.pm-certificate-container {
+  /* background: #618597; */
+  background-image: url('https://img.freepik.com/free-vector/vintage-ornamental-frame-beige-background_53876-116244.jpg?t=st=1687957698~exp=1687958298~hmac=fd17a3eebcc8114ba556db4423c8d34da69c2fba6dc066f2aa0b263c668eddb4');
+}
+.pm-certificate-header {
+  font-size: xx-large;
 }
 
 a {
